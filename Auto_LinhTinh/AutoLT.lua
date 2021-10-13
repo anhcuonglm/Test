@@ -85,22 +85,22 @@ function tbAutoLT:OnButtonClick(szWnd, nParam)
         -- tbAutoLT:check()
         -- Ui(Ui.UI_THUNGDO):OnButtonClick("so1")
         for i = 1, 1 do
-            Ui.tbACuong:BuyHLTieu()
+            Ui.tbFunc:BuyHLTieu()
         end
         for i = 1, 1 do
-            Ui.tbACuong:BuyHLTrung()
+            Ui.tbFunc:BuyHLTrung()
         end
         for i = 1, 1 do
-            Ui.tbACuong:BuyHLDai()
+            Ui.tbFunc:BuyHLDai()
         end
         for i = 1, 1 do
-            Ui.tbACuong:BuyTLTieu()
+            Ui.tbFunc:BuyTLTieu()
         end
         for i = 1, 1 do
-            Ui.tbACuong:BuyTLTrung()
+            Ui.tbFunc:BuyTLTrung()
         end
         for i = 1, 1 do
-            Ui.tbACuong:BuyTLDai()
+            Ui.tbFunc:BuyTLDai()
         end
         
 ---------------------------------------------------------        
@@ -160,7 +160,7 @@ function tbAutoLT:OnButtonClick(szWnd, nParam)
                 me.DoRecipe(1577)
             end
         end
-        -- Ui.tbACuong:BuyNL()
+        -- Ui.tbFunc:BuyNL()
         --tbAutoLT:TuiTanThu()
         --Ui(Ui.UI_SAYPANEL):OnListSel("LstSelectArray", 2)
         --Ui(Ui.UI_SAYPANEL):OnListSel("LstSelectArray", 3) --chon dong
@@ -227,7 +227,7 @@ function tbAutoLT:OnButtonClick(szWnd, nParam)
         me.Msg("test test tes")
         print("Đi tiếp")
         --Map.tbNAT:Test()
-        Ui.tbACuong:Test()
+        Ui.tbFunc:Test()
         -- UiManager:SwitchWindow(Ui.UI_THUNGDO)
         -- UiManager:SwitchWindow(Ui.UI_ITEMBOX)
         -- E:\KTthienMenh\interface\Auto_LinhTinh\Capture.spr -- duong dan hinh
@@ -378,8 +378,8 @@ function tbAutoLT:ReLoad1()
     fnDoScript("\\interface\\Auto_LinhTinh\\thungdo.lua");
 	me.Msg("<color=yellow>Reload Thành Công<color>")
 	UiManager:OpenWindow("UI_INFOBOARD", "<color=red>Xong")
-	Ui:RegisterNewUiWindow("UI_AUTOLT", "AutoLT", {"a",101, 110}, {"b",402, 222}, {"c",502, 222});
-    Ui:RegisterNewUiWindow("UI_THUNGDO", "thungdo", {"a",595, 50}, {"b",402, 222}, {"c",502, 222});
+	-- Ui:RegisterNewUiWindow("UI_AUTOLT", "AutoLT", {"a",101, 110}, {"b",402, 222}, {"c",502, 222});
+    -- Ui:RegisterNewUiWindow("UI_THUNGDO", "thungdo", {"a",595, 50}, {"b",402, 222}, {"c",502, 222});
 end
 --C:\anhcuong\ThienHaKiem\interface\autothief
 Ui:RegisterNewUiWindow("UI_AUTOLT", "AutoLT", {"a",101, 90}, {"b",402, 222}, {"c",502, 222});

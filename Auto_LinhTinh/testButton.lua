@@ -50,7 +50,7 @@ end
 uitestButton.OnMenuItemSelected=function(self,szWnd, nItemId, nParam)
 	if szWnd == self.BTN_testButton then
 			if nItemId==1 then
-		Ui.tbACuong:Test()
+		Ui.tbFunc:Test()
 			elseif nItemId==2 then
         Map.tbSuperMapLink:StartGoto({szType = "npcpos", szLink = ",5,0,"});	
 			elseif nItemId==3 then
@@ -68,8 +68,6 @@ uitestButton.OnMenuItemSelected=function(self,szWnd, nItemId, nParam)
 		   	end
 	 end
 end
-
-
 
 
 Ui:RegisterNewUiWindow("TESTBUTTON", "testButton", {"a", 350, 510}, {"b", 0, 0}, {"c", 0, 0});

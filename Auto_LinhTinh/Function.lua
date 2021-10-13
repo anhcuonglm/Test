@@ -1,7 +1,7 @@
-local self = tbACuong
+local self = tbFunc
 
-local tbACuong = Ui.tbACuong or {}
-Ui.tbACuong = tbACuong
+local tbFunc = Ui.tbFunc or {}
+Ui.tbFunc = tbFunc
 me.Msg("test test ACuong")
 
 local idKhoanLv7 = 722
@@ -15,16 +15,16 @@ local idThachLv6 = 731
 local idThachLv7 = 732
 
 local szCmd = [=[
-	"Ui.tbACuong:BuyNL();
+	"Ui.tbFunc:BuyNL();
 ]=];
 
 local uiSayPanel =  Ui(Ui.UI_SAYPANEL)
-function tbACuong:Test()
+function tbFunc:Test()
     me.Msg("test ACuong ACuong")
 end
 
-function tbACuong:BuyHLTieu()
-    tbACuong:TuiTanThu()
+function tbFunc:BuyHLTieu()
+    tbFunc:TuiTanThu()
     uiSayPanel:OnListSel("LstSelectArray", 7);
     uiSayPanel:OnListSel("LstSelectArray", 1);
     uiSayPanel:OnListSel("LstSelectArray", 2);
@@ -38,8 +38,8 @@ function tbACuong:BuyHLTieu()
     return 0
 end
 
-function tbACuong:BuyHLTrung()
-    tbACuong:TuiTanThu()
+function tbFunc:BuyHLTrung()
+    tbFunc:TuiTanThu()
     uiSayPanel:OnListSel("LstSelectArray", 7);
     uiSayPanel:OnListSel("LstSelectArray", 1);
     uiSayPanel:OnListSel("LstSelectArray", 2);
@@ -53,8 +53,8 @@ function tbACuong:BuyHLTrung()
     return 0
 end
 
-function tbACuong:BuyHLDai()
-    tbACuong:TuiTanThu()
+function tbFunc:BuyHLDai()
+    tbFunc:TuiTanThu()
     uiSayPanel:OnListSel("LstSelectArray", 7);
     uiSayPanel:OnListSel("LstSelectArray", 1);
     uiSayPanel:OnListSel("LstSelectArray", 2);
@@ -68,8 +68,8 @@ function tbACuong:BuyHLDai()
     return 0
 end
 
-function tbACuong:BuyTLTieu()
-    tbACuong:TuiTanThu()
+function tbFunc:BuyTLTieu()
+    tbFunc:TuiTanThu()
     uiSayPanel:OnListSel("LstSelectArray", 7);
     uiSayPanel:OnListSel("LstSelectArray", 1);
     uiSayPanel:OnListSel("LstSelectArray", 1);
@@ -83,8 +83,8 @@ function tbACuong:BuyTLTieu()
     return 0
 end
 
-function tbACuong:BuyTLTrung()
-    tbACuong:TuiTanThu()
+function tbFunc:BuyTLTrung()
+    tbFunc:TuiTanThu()
     uiSayPanel:OnListSel("LstSelectArray", 7);
     uiSayPanel:OnListSel("LstSelectArray", 1);
     uiSayPanel:OnListSel("LstSelectArray", 1);
@@ -98,8 +98,8 @@ function tbACuong:BuyTLTrung()
     return 0
 end
 
-function tbACuong:BuyTLDai()
-    tbACuong:TuiTanThu()
+function tbFunc:BuyTLDai()
+    tbFunc:TuiTanThu()
     uiSayPanel:OnListSel("LstSelectArray", 7);
     uiSayPanel:OnListSel("LstSelectArray", 1);
     uiSayPanel:OnListSel("LstSelectArray", 1);
@@ -114,8 +114,8 @@ function tbACuong:BuyTLDai()
 end
 
 -------------------Gia Nhap Mon Phai--------------------
-function tbACuong:GiaNhapMN()
-    tbACuong:TuiTanThu()
+function tbFunc:GiaNhapMN()
+    tbFunc:TuiTanThu()
     uiSayPanel:OnListSel("LstSelectArray", 2);
     uiSayPanel:OnListSel("LstSelectArray", 8);
     uiSayPanel:OnListSel("LstSelectArray", 1);
@@ -126,8 +126,8 @@ function tbACuong:GiaNhapMN()
     Ui.tbLogic.tbTimer:Register(10, myclose);
     return 0
 end
-function tbACuong:GiaNhapTT()
-    tbACuong:TuiTanThu()
+function tbFunc:GiaNhapTT()
+    tbFunc:TuiTanThu()
     uiSayPanel:OnListSel("LstSelectArray", 2);
     uiSayPanel:OnListSel("LstSelectArray", 3);
     uiSayPanel:OnListSel("LstSelectArray", 1);
@@ -139,7 +139,7 @@ function tbACuong:GiaNhapTT()
     return 0
 end
 --------------------TuiTanThu---------------------------
-function tbACuong:TuiTanThu()
+function tbFunc:TuiTanThu()
     local tbFind = me.FindItemInBags(18,1,351,1);
 	for j, tbItem in pairs(tbFind) do
 	    me.UseItem(tbItem.pItem);
@@ -147,7 +147,7 @@ function tbACuong:TuiTanThu()
     
 end
 
-function tbACuong:BuyNL()
+function tbFunc:BuyNL()
     Map.tbSuperMapLink:StartGoto({szType = "npcpos", szLink = ",5,3565,3"})
     local bOK, szMsg = me.ShopBuyItem(idThachLv1, 42);
     local bOK, szMsg = me.ShopBuyItem(idThachLv2, 67);
@@ -160,6 +160,6 @@ function tbACuong:BuyNL()
     local bOK, szMsg = me.ShopBuyItem(idKhoanLv8, 10);
 end
 
-local tCmd={"Ui.tbACuong:BuyNL();", "BuyNL", "", "Alt+R", "Alt+R", "BuyNL"};
+local tCmd={"Ui.tbFunc:BuyNL();", "BuyNL", "", "Alt+R", "Alt+R", "BuyNL"};
 	AddCommand(tCmd[4], tCmd[3], tCmd[2], tCmd[7] or UiShortcutAlias.emKSTATE_INGAME);
 	UiShortcutAlias:AddAlias(tCmd[2], tCmd[1]);

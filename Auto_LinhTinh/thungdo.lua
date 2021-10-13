@@ -8,7 +8,7 @@ local so1 = "so1"
 function tbthungdo:OnButtonClick(szWnd, nParam)
     if szWnd == so1 then
         me.Msg("so1")
-        
+        tbthungdo:ReLoad1()
     end
 end
 
